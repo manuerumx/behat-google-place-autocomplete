@@ -6,15 +6,26 @@
   "require": {
     "php": ">=5.6",
     "behat/behat": "^3.0",
-    "medology/flexible-mink": "~2.0",
+    "medology/flexible-mink": "dev-laravel6",
     "behat/mink-extension": "^2.0",
     "symfony/config": "^4.0"
   },
   "require-dev":{
     "vlucas/phpdotenv": "^2.3",
     "behat/mink-selenium2-driver": "*",
-    "chekote/behat-retry-extension": "^1.1"
+    "chekote/behat-retry-extension": "^1.1",
+    "chekote/noun-store": "dev-laravel6"
   },
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:manuerumx/FlexibleMink.git"
+        },
+{
+            "type": "vcs",
+            "url": "git@github.com:manuerumx/noun-store.git"
+        }
+],
   "autoload": {
     "psr-0": {
       "": [

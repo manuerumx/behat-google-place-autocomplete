@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7515a585e0e71f8c45119060ab67fa7c",
+    "content-hash": "34a73575b591def35ad311765e929844",
     "packages": [
         {
             "name": "behat/behat",
@@ -308,20 +308,20 @@
         },
         {
             "name": "chekote/noun-store",
-            "version": "v4.0.0",
+            "version": "dev-laravel6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Chekote/noun-store.git",
-                "reference": "7b53f1482c6210318616041e7abe4b44ef8bbb0f"
+                "url": "https://github.com/manuerumx/noun-store.git",
+                "reference": "2db2de36338304f9e6af209a69b135155f0308f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chekote/noun-store/zipball/7b53f1482c6210318616041e7abe4b44ef8bbb0f",
-                "reference": "7b53f1482c6210318616041e7abe4b44ef8bbb0f",
+                "url": "https://api.github.com/repos/manuerumx/noun-store/zipball/2db2de36338304f9e6af209a69b135155f0308f9",
+                "reference": "2db2de36338304f9e6af209a69b135155f0308f9",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~5.4",
+                "illuminate/support": "~5.4|~6.20",
                 "php": ">=5.6.30"
             },
             "require-dev": {
@@ -336,7 +336,13 @@
                     ]
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-0": {
+                    "": [
+                        "test"
+                    ]
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -345,7 +351,10 @@
                 "noun",
                 "testing"
             ],
-            "time": "2020-03-16T17:06:31+00:00"
+            "support": {
+                "source": "https://github.com/manuerumx/noun-store/tree/laravel6"
+            },
+            "time": "2021-05-10T13:03:50+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -515,22 +524,23 @@
         },
         {
             "name": "medology/flexible-mink",
-            "version": "v2.5.1",
+            "version": "dev-laravel6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Medology/FlexibleMink.git",
-                "reference": "6fc7683e212d95a9e47a748257a233874188d4be"
+                "url": "https://github.com/manuerumx/FlexibleMink.git",
+                "reference": "03a7afa522c4aeb0a60697195fcc28b9c77f198e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Medology/FlexibleMink/zipball/6fc7683e212d95a9e47a748257a233874188d4be",
-                "reference": "6fc7683e212d95a9e47a748257a233874188d4be",
+                "url": "https://api.github.com/repos/manuerumx/FlexibleMink/zipball/03a7afa522c4aeb0a60697195fcc28b9c77f198e",
+                "reference": "03a7afa522c4aeb0a60697195fcc28b9c77f198e",
                 "shasum": ""
             },
             "require": {
                 "behat/behat": "^3.0",
                 "behat/mink-extension": "^2.0",
-                "chekote/noun-store": "^4.0",
+                "chekote/noun-store": "dev-laravel6",
+                "ext-curl": "*",
                 "ext-zip": "^1.0",
                 "php": ">=5.6.31",
                 "symfony/config": ">=2.8"
@@ -545,17 +555,28 @@
                     "": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-0": {
+                    "features": ""
+                },
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
             "description": "Mink Extensions for Commonly Used Assertions and Object Storage",
             "keywords": [
-                "Behat",
-                "Mink",
+                "behat",
+                "mink",
                 "testing"
             ],
-            "time": "2020-04-16T19:08:01+00:00"
+            "support": {
+                "issues": "https://github.com/Medology/FlexibleMink/issues",
+                "source": "https://github.com/Medology/FlexibleMink"
+            },
+            "time": "2021-05-10T14:04:00+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1838,7 +1859,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "medology/flexible-mink": 20,
+        "chekote/noun-store": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
